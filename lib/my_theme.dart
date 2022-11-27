@@ -13,7 +13,7 @@ class MyThemeData {
       ),
       subtitle1: TextStyle(
         fontSize: 25,
-        fontWeight: FontWeight.normal,
+        fontWeight: FontWeight.bold,
         color: blackColor,
       ),
     ),

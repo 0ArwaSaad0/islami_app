@@ -1,8 +1,6 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:islami_app/home/ahadeth.dart';
-import 'package:islami_app/home/quran.dart';
+import 'package:islami_app/quran/quran.dart';
 import 'package:islami_app/home/radio.dart';
 import 'package:islami_app/home/sebha.dart';
 import 'package:islami_app/my_theme.dart';
@@ -70,5 +68,10 @@ class _HomeState extends State<Home> {
     );
   }
 
-  List<Widget> tabes = [RadioTab(), SebhaTab(), QuranTab(), AhadethTab()];
+  List<Widget> tabes = [
+    RadioTab(),
+    SebhaTab(),
+    AhadethTab(),
+    QuranTab(),
+  ];
 }
