@@ -130,7 +130,7 @@ class QuranTab extends StatelessWidget {
             child: ListView.separated(
               itemCount: soura_name.length,
               itemBuilder: (_, index) {
-                return SouraNameItem(soura_name[index]);
+                return SouraNameItem(soura_name[index],index);
               },
               separatorBuilder: (context, int index) {
                 return Divider(

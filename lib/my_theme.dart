@@ -5,7 +5,7 @@ class MyThemeData {
   static Color goldColor = const Color.fromRGBO(183, 147, 95, 1.0);
   static ThemeData lightTheme = ThemeData(
     scaffoldBackgroundColor: Colors.transparent,
-    textTheme:  TextTheme(
+    textTheme: TextTheme(
       headline1: TextStyle(
         fontSize: 30,
         fontWeight: FontWeight.bold,
@@ -21,6 +21,7 @@ class MyThemeData {
       backgroundColor: Colors.transparent,
       elevation: 0,
       centerTitle: true,
+      iconTheme: IconThemeData(color: Colors.black),
     ),
   );
   static ThemeData daarkTheme = ThemeData(
