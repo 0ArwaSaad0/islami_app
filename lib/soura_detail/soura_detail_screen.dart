@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami_app/my_theme.dart';
+import 'package:islami_app/soura_detail/ayaat_detail.dart';
 import 'package:islami_app/soura_detail/soura_model.dart';
 
 class SouraDetailScreen extends StatefulWidget {
@@ -35,20 +36,23 @@ class _SouraDetailScreenState extends State<SouraDetailScreen> {
         ),
         body: ayaat.isEmpty
             ? const Center(child: CircularProgressIndicator())
-            : ListView.separated(
-                itemCount: ayaat.length,
-                itemBuilder: (_, index) => Text(
-                  ayaat[index],
-                  style: Theme.of(context).textTheme.subtitle1,
-                  textAlign: TextAlign.center,
+            : Card(
+                margin: EdgeInsets.symmetric(vertical: 40, horizontal: 20),
+                elevation: 10,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(25)),
+                child: ListView.separated(
+                  itemCount: ayaat.length,
+                  itemBuilder: (_, index) =>
+                      AyaatDetail(ayaat: ayaat[index], index: index),
+                  separatorBuilder: (BuildContext context, int index) {
+                    return Container(
+                      color: MyThemeData.goldColor,
+                      height: 1,
+                      margin: EdgeInsets.symmetric(horizontal: 12),
+                    );
+                  },
                 ),
-                separatorBuilder: (BuildContext context, int index) {
-                  return Divider(
-                    endIndent: 25,
-                    indent: 25,
-                    color: MyThemeData.goldColor,
-                  );
-                },
               ),
       )
     ]);
@@ -57,7 +61,7 @@ class _SouraDetailScreenState extends State<SouraDetailScreen> {
   void load_fille(int index) async {
     String content =
         await rootBundle.loadString('assets/files/${index + 1}.txt');
-    List<String> lines = content.split('\n');
+    List<String> lines = content.trim().split('\n');
     ayaat = lines;
     setState(() {});
   }
