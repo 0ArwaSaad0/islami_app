@@ -4,6 +4,7 @@ import 'package:islami_app/quran/quran.dart';
 import 'package:islami_app/home/radio.dart';
 import 'package:islami_app/home/sebha.dart';
 import 'package:islami_app/my_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class Home extends StatefulWidget {
   static const String routeName = 'home';
@@ -27,7 +28,7 @@ class _HomeState extends State<Home> {
         Scaffold(
             appBar: AppBar(
               title: Text(
-                'Islami',
+                AppLocalizations.of(context)!.app_title,
                 style: Theme.of(context).textTheme.headline1,
               ),
             ),
