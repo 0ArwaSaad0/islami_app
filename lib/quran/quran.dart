@@ -133,29 +133,28 @@ class QuranTab extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(4.0),
             child: Container(
-
-              child: Text('اسم السوره',style: Theme.of(context).textTheme.subtitle1,),
+              child: Text(
+                'اسم السوره',
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
             ),
           ),
           Container(
             color: MyThemeData.goldColor,
             height: 2,
           ),
-
           Expanded(
             flex: 5,
-
             child: ListView.separated(
               itemCount: soura_name.length,
               itemBuilder: (_, index) {
-                return SouraNameItem(soura_name[index],index);
+                return SouraNameItem(soura_name[index], index);
               },
               separatorBuilder: (context, int index) {
                 return Container(
                   color: MyThemeData.goldColor,
                   height: 1,
                   margin: EdgeInsets.symmetric(horizontal: 50),
-
                 );
               },
             ),
