@@ -15,10 +15,13 @@ class SouraNameItem extends StatelessWidget {
               SouraDetailScreen.routeName,
           arguments:SuraModelArgument(index: index, suraName: name)
             ),
-        child: Text(
-          name,
-          textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.subtitle1,
+        child: Padding(
+          padding: const EdgeInsets.all(3.0),
+          child: Text(
+            name,
+            textAlign: TextAlign.center,
+            style: Theme.of(context).textTheme.subtitle1,
+          ),
         ));
   }
 }

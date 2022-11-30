@@ -33,7 +33,6 @@ class _HomeState extends State<Home> {
             ),
             bottomNavigationBar: BottomNavigationBar(
               selectedItemColor: Colors.black,
-
               currentIndex: current_index,
               onTap: (index) {
                 current_index = index;
@@ -48,19 +47,21 @@ class _HomeState extends State<Home> {
                     label: 'Radio',
                     backgroundColor: MyThemeData.goldColor),
                 BottomNavigationBarItem(
-                    icon: const ImageIcon(AssetImage('assets/images/sebha.png'),
-                        size: 30),
+                    icon: const ImageIcon(
+                      AssetImage('assets/images/sebha.png'),
+                    ),
                     label: 'Sebha',
                     backgroundColor: MyThemeData.goldColor),
                 BottomNavigationBarItem(
                     icon: const ImageIcon(
-                        AssetImage('assets/images/ahadeth.png'),
-                        size: 30),
+                      AssetImage('assets/images/ahadeth.png'),
+                    ),
                     label: 'Ahadeth',
                     backgroundColor: MyThemeData.goldColor),
                 BottomNavigationBarItem(
-                    icon: const ImageIcon(AssetImage('assets/images/quran.png'),
-                        size: 30),
+                    icon: const ImageIcon(
+                      AssetImage('assets/images/quran.png'),
+                    ),
                     label: 'Quran',
                     backgroundColor: MyThemeData.goldColor),
               ],

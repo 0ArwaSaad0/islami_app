@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/hadeth_detail/hadeth_detail.dart';
 
 import 'package:islami_app/home/home_page.dart';
 
@@ -21,6 +22,7 @@ class IslamiApp extends StatelessWidget {
       routes: {
         Home.routeName:(c)=>Home(),
         SouraDetailScreen.routeName:(c)=>SouraDetailScreen(),
+        HadethDetail.routeName:(c)=>HadethDetail(),
       },
       theme: MyThemeData.lightTheme,
         darkTheme: MyThemeData.daarkTheme,
