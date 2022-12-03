@@ -2,5 +2,11 @@
 "app_title":"اسلامي",
 "sura_name":"اسم السوره",
 "ahadeth":"احاديث",
-"radio":"اذاعه القراءن الكريم"
+"radio":"اذاعه القراءن الكريم",
+"radio_tap":"الراديو",
+"sebha_tap":"السبحه",
+"ahadeth_tab":"احاديث",
+"quran_tab":"قراءن",
+"setting":"اعدادات",
+"tesbiha_number":"عدد التسبيحات"
 }

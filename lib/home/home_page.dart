@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/home/ahadeth.dart';
+import 'package:islami_app/home/setting.dart';
 import 'package:islami_app/quran/quran.dart';
 import 'package:islami_app/home/radio.dart';
 import 'package:islami_app/home/sebha.dart';
@@ -45,7 +46,7 @@ class _HomeState extends State<Home> {
                       AssetImage('assets/images/radio.png'),
                       size: 30,
                     ),
-                    label: 'Radio',
+                    label: AppLocalizations.of(context)!.radio_tap,
                     backgroundColor: MyThemeData.goldColor),
                 BottomNavigationBarItem(
                     icon: const ImageIcon(
@@ -57,13 +58,19 @@ class _HomeState extends State<Home> {
                     icon: const ImageIcon(
                       AssetImage('assets/images/ahadeth.png'),
                     ),
-                    label: 'Ahadeth',
+                    label: AppLocalizations.of(context)!.ahadeth_tab,
                     backgroundColor: MyThemeData.goldColor),
                 BottomNavigationBarItem(
                     icon: const ImageIcon(
                       AssetImage('assets/images/quran.png'),
                     ),
-                    label: 'Quran',
+                    label: AppLocalizations.of(context)!.quran_tab,
+                    backgroundColor: MyThemeData.goldColor),
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.settings,
+                    ),
+                    label: AppLocalizations.of(context)!.setting,
                     backgroundColor: MyThemeData.goldColor),
               ],
             ),
@@ -77,5 +84,7 @@ class _HomeState extends State<Home> {
     SebhaTab(),
     AhadethTab(),
     QuranTab(),
+    SettingTab()
+
   ];
 }
