@@ -2,5 +2,12 @@
 "app_title":"Islami",
 "sura_name":"Sura Name",
 "ahadeth":"Ahadeth",
-"radio":"Radio"
+"radio":"Radio",
+"radio_tap":"Radio",
+"sebha_tap":"Sebha",
+"ahadeth_tab":"Ahadeth",
+"quran_tab":"Quran",
+"setting":"Settings",
+"tesbiha_number":"Number Of Tesbiha"
+
 }

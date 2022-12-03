@@ -28,9 +28,12 @@ class HadethDetail extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(25),
           ),
-          child: ListView.builder(
-            itemBuilder: (_, index) => Text(args.content[index]),
-            itemCount: args.content.length,
+          child: Padding(
+            padding: const EdgeInsets.all(11.0),
+            child: ListView.builder(
+              itemBuilder: (_, index) => Text(args.content[index]),
+              itemCount: args.content.length,
+            ),
           ),
         ),
       ),
